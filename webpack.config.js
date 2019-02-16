@@ -27,8 +27,17 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
               presets: ['@babel/preset-env']
             }
           }
+        },
+        {
+          test: /\.(png|svg|jpe?g|gif)$/,
+          use: {
+            loader: "url-loader",
+            options: {
+              limit: 5000,
+            }
+          }
         }
-      ]
+      ] 
     }
   },
   modeConfig(mode))
