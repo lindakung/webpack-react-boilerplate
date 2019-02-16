@@ -18,16 +18,6 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
     ],
     module: {
       rules: [
-        {        
-          test: /\.m?js$/,
-          exclude: /(node_modules)/,
-          use: {
-            loader: "babel-loader",
-            options: {
-              presets: ['@babel/preset-env']
-            }
-          }
-        },
         {
           test: /\.(png|svg|jpe?g|gif)$/,
           use: {
